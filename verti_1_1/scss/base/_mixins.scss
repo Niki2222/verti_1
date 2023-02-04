@@ -1,0 +1,19 @@
+@mixin tablet {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin blue_btn {
+    background-color: $btn-bg-color;
+    color: $white-text-color;
+    &:hover {
+        background-color: $logo-bg-color;
+    }
+}

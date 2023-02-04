@@ -1,0 +1,30 @@
+footer {
+    .footer_section {
+        @include tablet {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include desktop {
+            grid-template-columns: repeat(4, 1fr);
+            font-size: .8rem;
+        }
+        .footer_article {
+            margin: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid $gray-shaddow-color;
+            line-height: 2;
+            @include tablet {
+                border: none;
+            }
+            a {
+                text-decoration: underline;
+            }
+            i {
+                font-size: 1.7rem;
+            }
+            h4 {
+                margin-bottom: 1rem;
+            }
+        }
+    } 
+}

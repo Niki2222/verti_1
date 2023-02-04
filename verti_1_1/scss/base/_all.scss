@@ -1,0 +1,23 @@
+html {
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+}
+
+body {
+    background-color: $page-bg-color;
+    color: $base-font-color;
+    h1, h2, h3, h4 {
+        color: $gray-shaddow-color;
+    }
+    .button {
+        display: block;
+        font-weight: 700;
+        padding: 1rem;
+        text-align: center;
+        margin-top: .5rem;
+        border-radius: $border-radius;
+    }
+}
+
+
+

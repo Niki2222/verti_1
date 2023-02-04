@@ -1,0 +1,134 @@
+.mobile_menu_container {
+    margin: .2em;
+    position: relative;
+    label {
+        padding: .1em .2em;
+        background-color: $base-font-color;
+        color: $white-text-color;
+        border-radius: $border-radius;
+    }
+    #show_menu {
+        display: none;
+    }
+    .nav_mobile {
+        display: none;
+    }
+    #show_menu:checked {
+        ~ .nav_mobile {
+            display: block;
+            background-color: $white-text-color;
+            position: absolute;
+            top: 1.3rem;
+            width: 100%;
+            li {
+                border-bottom: 1px solid $base-font-color;
+                padding-left: 1.5em;
+                font-weight: bold;
+            }
+            
+        } 
+    }
+    @include tablet {
+        display: none;
+    }
+}
+
+.container_header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    .nav_section {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1.9rem;
+            .nav_section_ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                li {
+                    margin-right: 1em;
+                    padding: 0.3rem;
+                    &:hover {
+                        background-color: $logo-bg-color;
+                        border-radius: $border-radius;
+                    }
+                }
+            }
+        }
+        
+        .nav {
+            display: none;
+            @include tablet {
+                display: flex;
+                font-size: .8rem;
+                
+            }
+        }
+    }
+    
+    .logo {
+        background-color: $logo-bg-color;
+        color: $white-text-color;
+        font-family: $logo-font-family;
+        letter-spacing: .2em;
+        width: 5rem;
+        text-align: center;
+        border-radius: $border-radius;
+        margin: 0 auto;
+        margin-bottom: .5rem;
+        padding: .2rem;
+        @include tablet {
+            margin-left: 0;
+        }
+    }
+    .baner {
+        background-color: $white-text-color;
+        padding: 2rem;
+        border-radius: $border-radius;
+        .text {
+            text-align: center;
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1.5rem;
+                font-weight: 300;
+                padding: 1rem 0;
+            }
+        }
+       
+        .blue_button {
+          @include blue_btn;
+        }
+        .gray_button {
+            background-color: $page-bg-color;
+            &:hover {
+                background-color: $logo-bg-color;
+                color: $white-text-color;
+            }
+        }
+        i {
+            margin-right: .5rem;
+        }
+        @include tablet {
+            display: flex;
+            .text {
+                text-align: left;
+                p {
+                    padding-right: 1rem;
+                }
+            }
+            .btn {
+                width: 40%;
+                .button {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-around;
+                    align-items: center;
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}

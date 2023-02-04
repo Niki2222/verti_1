@@ -1,3 +1,9 @@
-body {
-    background-color: green;
-}
+@import 'base/variables';
+@import 'base/colors';
+@import 'base/mixins.scss';
+@import 'base/reset';
+@import 'base/all';
+@import 'components/header.scss';
+@import 'components/first_section.scss';
+@import 'components/second_section.scss';
+@import 'components/footer.scss';
